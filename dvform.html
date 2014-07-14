@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<script type="text/javascript"  src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
+</head>
+<body>
+<form name="nconvert" >
+Scientific Name : <input type="text" name="scname"></input><br/>
+Common Name : <input type="text" name="cname"></input><br/>
+<input type="checkbox" id="idhelp" name="idhelp" value="idhelp"> I need help with identification?</input><br>
+Place Name :<input type="text" name="place" required="true" ></input><br/>
+Click Date: <input type="date" name="clickdate" required="true" ></input><br/>
+
+<br/>
+<p> Click on the Location on the map</p>
+<div id="map" class="smallmap" style="width:400px; height:300px"></div>
+<br/>
+Latitude :     <input type="number" name="lat" id="lat" required="true" ></input><br/>
+Longitude :  <input type="number" name="long" id="long" required="true" ></input><br/>
+Identification Source <input type="text" name="idsource" id="idsource"  ></input><br/>
+
+<p> link of the photograph (optional flickr,inaturalist,IBP link) </p>
+<input type="url" name="photolink" id="photolink"  rows="3"  ></input> <br/>
+<br/>
+<input type="button" name="GetFormat"  id="getfmt" value="Get Format" onclick="gformat(this.form);"></input> <input type="button" name="GetFormatJson"  id="getfmt" value="Get Format in Json" onclick="gformatJson(this.form);"></input><br/>
+</form>
+<br/>
+ <p> Text to post on the group</p> 
+<div>
+<textarea name="format " id="format" rows="9" style="width:400px; height:150px"></textarea>
+</div>
+  <script type="text/javascript" src="convert.js"></script>
+
+</body>
+</html>
